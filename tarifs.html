@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tarifs · Halvern</title>
+<meta name="description" content="Les formules Halvern à prix fixe : Découverte gratuite, Investisseur et Patrimoine, simulateur de frais face à une gestion déléguée.">
+<link rel="canonical" href="https://rlekmine-oa.github.io/halvern/tarifs.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0a1828">
+<meta name="author" content="LEKMINE Rayan">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Halvern">
+<meta property="og:title" content="Tarifs · Halvern">
+<meta property="og:description" content="Les formules Halvern à prix fixe : Découverte gratuite, Investisseur et Patrimoine, simulateur de frais face à une gestion déléguée.">
+<meta property="og:url" content="https://rlekmine-oa.github.io/halvern/tarifs.html">
+<meta property="og:image" content="https://rlekmine-oa.github.io/halvern/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://rlekmine-oa.github.io/halvern/og.png">
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="entete bande" id="entete">
+  <div class="cadre">
+    <a class="marque" href="index.html" aria-label="Halvern, accueil"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2.5v15M16 2.5v15M4 13 16 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Halvern</a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="fonctionnalites.html">Fonctionnalités</a>
+      <a href="methode.html">Méthode</a>
+      <a href="tarifs.html" class="actif" aria-current="page">Tarifs</a>
+      <a href="questions.html">Questions</a>
+      <a class="cta" href="index.html#rejoindre">Liste d'attente</a>
+      <button class="bouton-menu" id="bouton-menu" type="button" aria-expanded="false" aria-controls="menu-mobile">Menu</button>
+    </nav>
+  </div>
+  <nav class="menu-mobile cadre" id="menu-mobile" aria-label="Navigation sur téléphone" hidden>
+    <a href="index.html">Accueil</a>
+    <a href="fonctionnalites.html">Fonctionnalités</a>
+    <a href="methode.html">Méthode</a>
+    <a href="tarifs.html" aria-current="page">Tarifs</a>
+    <a href="questions.html">Questions</a>
+    <a href="index.html#rejoindre">Liste d'attente</a>
+  </nav>
+</header>
+
+<main id="haut">
+<section class="page-tete bande" aria-labelledby="pt-titre">
+  <div class="cadre">
+    <p class="fil"><a href="index.html">Accueil</a> / Tarifs</p>
+    <h1 id="pt-titre">Des formules à prix fixe, jamais un pourcentage</h1>
+    <p class="chapo">Commencez gratuitement. Les inscrits à la liste d'attente paient 40 % de moins la première année.</p>
+  </div>
+</section>
+
+<section class="tarif bande" id="tarif" aria-labelledby="t-tarif">
+  <div class="cadre">
+    <div class="tarif-tete">
+      <div>
+        <p class="chapeau" style="margin-top:0">Commencez gratuitement avec la mesure de vos choix face au marché. Passez à une formule payante pour le poste de travail complet.</p>
+      </div>
+      <div class="periode" role="group" aria-label="Période de facturation">
+        <button type="button" id="p-annuel" class="choisi" aria-pressed="true">Annuel<small>2 mois offerts</small></button>
+        <button type="button" id="p-mensuel" aria-pressed="false">Mensuel</button>
+      </div>
+    </div>
+    <div class="formules">
+      <div class="formule-carte">
+        <h3>Découverte</h3>
+        <p class="pour">Pour savoir si vos choix battent le marché.</p>
+        <div class="montant">0 €</div>
+        <p class="detail-prix">Gratuit, sans limite de durée.</p>
+        <ul><li>Un portefeuille</li><li>Performance face à l'indice</li><li>Valeur ajoutée par ligne</li><li>Cours de clôture</li></ul>
+        <a class="choisir" href="index.html#rejoindre" data-formule="decouverte">Rejoindre la liste</a>
+      </div>
+      <div class="formule-carte phare">
+        <span class="badge">Recommandé</span>
+        <h3>Investisseur</h3>
+        <p class="pour">Pour piloter activement un portefeuille d'actions et d'ETF.</p>
+        <div class="montant" data-annuel="89 €" data-mensuel="9 €"><span class="m">89 €</span><small class="u">par an</small></div>
+        <p class="detail-prix" data-annuel="Prix fondateur : &lt;b&gt;53 €&lt;/b&gt; la première année." data-mensuel="Soit 108 € par an. Prix fondateur : &lt;b&gt;5,40 €&lt;/b&gt; par mois la première année.">Prix fondateur : <b>53 €</b> la première année.</p>
+        <ul><li>Les onze espaces du poste de travail</li><li>Corrélations, paires, risque simulé</li><li>Cours pendant la séance, alertes</li><li>Deux comptes : PEA et compte-titres</li></ul>
+        <a class="choisir" href="index.html#rejoindre" data-formule="investisseur">Réserver le prix fondateur</a>
+      </div>
+      <div class="formule-carte">
+        <h3>Patrimoine</h3>
+        <p class="pour">Pour un patrimoine important ou celui de toute une famille.</p>
+        <div class="montant" data-annuel="290 €" data-mensuel="29 €"><span class="m">290 €</span><small class="u">par an</small></div>
+        <p class="detail-prix" data-annuel="Prix fondateur : &lt;b&gt;174 €&lt;/b&gt; la première année." data-mensuel="Soit 348 € par an. Prix fondateur : &lt;b&gt;17,40 €&lt;/b&gt; par mois la première année.">Prix fondateur : <b>174 €</b> la première année.</p>
+        <ul><li>Tout Investisseur</li><li>Comptes et portefeuilles illimités, famille comprise</li><li>Rapport annuel en PDF, export des données</li><li>Cours en temps réel sur les principales places</li></ul>
+        <a class="choisir" href="index.html#rejoindre" data-formule="patrimoine">Réserver le prix fondateur</a>
+      </div>
+    </div>
+    <div class="fondateur"><b>−40 %</b><span>Prix fondateur : les inscrits à la liste d'attente paient 40 % de moins la première année. Rien n'est prélevé aujourd'hui, et l'inscription n'engage à rien.</span></div>
+    <p class="cout-note">Pour 100 000 € investis, la formule Patrimoine revient à 0,29 % par an, et à moins de 0,03 % pour un million. Un fonds d'actions géré activement a prélevé 1,37 % en moyenne en 2025 (AMF). Prix TTC.</p>
+  </div>
+</section>
+
+<section class="frais bande gris" id="frais" aria-labelledby="t-frais">
+  <div class="cadre">
+    <h2 class="titre-section" id="t-frais">Ce que vous coûte une gestion déléguée</h2>
+    <p class="chapeau">En 2025, les fonds d'actions gérés activement ont prélevé en moyenne 1,37 % par an selon l'AMF. La même année, 71 % des fonds actions internationaux en euros ont fait moins bien que leur indice. Réglez votre situation :</p>
+    <div class="calcul">
+      <div class="reglages">
+        <div class="reglage"><label for="k-capital">Capital placé <output id="o-capital">100 000 €</output></label><input id="k-capital" type="range" min="10000" max="1000000" step="5000" value="100000"></div>
+        <div class="reglage"><label for="k-duree">Durée <output id="o-duree">20 ans</output></label><input id="k-duree" type="range" min="5" max="30" step="1" value="20"></div>
+        <div class="reglage"><label for="k-rend">Rendement avant frais <output id="o-rend">6,0 % par an</output></label><input id="k-rend" type="range" min="2" max="10" step="0.5" value="6"><div class="aide">Le même pour les deux options : seuls les frais changent.</div></div>
+        <div class="reglage"><label for="k-frais">Frais de la gestion déléguée <output id="o-frais">1,90 % par an</output></label><input id="k-frais" type="range" min="0.5" max="3" step="0.01" value="1.9">
+          <div class="prereglages"><button type="button" data-f="1.37">1,37 % · fonds d'actions actifs, frais totaux 2025 (AMF)</button><button type="button" data-f="1.9" class="choisi">1,90 % · impact total sur 5 ans (ESMA)</button></div></div>
+        <div class="reglage"><label>Formule Halvern <output id="o-formule">Investisseur · 89 €/an</output></label>
+          <div class="prereglages" id="formules-sim"><button type="button" data-p="89" data-n="Investisseur" class="choisi">Investisseur · 89 €/an</button><button type="button" data-p="290" data-n="Patrimoine">Patrimoine · 290 €/an</button></div></div>
+        <div class="reglage"><label for="k-direct">Vos frais en direct <output id="o-direct">0,35 % par an</output></label><input id="k-direct" type="range" min="0" max="1" step="0.05" value="0.35"><div class="aide">0,35 % : droits de garde moyens d'une banque de réseau pour 60 000 € sur dix lignes (AMF). Moins chez un courtier en ligne.</div></div>
+      </div>
+      <div class="resultat">
+        <div class="ecart-final"><div class="l" id="o-titre-ecart">Gardé en plus au bout de 20 ans</div><div class="v" id="o-ecart">0 €</div></div>
+        <div class="deux">
+          <div><div class="l"><i style="background:var(--accent)"></i>En direct, avec Halvern</div><div class="v" id="o-direct-v">0 €</div></div>
+          <div><div class="l"><i style="background:var(--temoin)"></i>En gestion déléguée</div><div class="v" id="o-delegue-v">0 €</div></div>
+        </div>
+        <svg id="courbe-frais" viewBox="0 0 560 220" role="img" aria-label="Évolution du capital dans les deux options"></svg>
+        <p class="hypothese">Simulation à rendement égal avant frais, frais prélevés chaque année, abonnement Halvern déduit chaque année au prix plein, sans le prix fondateur. Ce n'est pas une prévision : un investisseur qui gère seul peut faire mieux ou moins bien qu'un gérant.</p>
+      </div>
+    </div>
+    <p class="sources">Sources : AMF, <a href="https://www.amf-france.org/fr/actualites-publications/actualites/les-frais-des-placements-financiers-continuent-de-baisser-en-particulier-ceux-des-fonds">Lettre de l'Observatoire de l'épargne n° 65</a>, avril 2026 (frais totaux moyens des fonds d'actions « actifs » en 2025, impact total moyen des frais selon l'ESMA, droits de garde) ; S&amp;P Dow Jones Indices, <a href="https://www.spglobal.com/spdji/en/spiva/article/spiva-europe-year-end-2025/">SPIVA Europe Year-End 2025</a>, 19 mars 2026.</p>
+  </div>
+</section>
+
+<section class="comparatif bande" aria-labelledby="t-comparatif">
+  <div class="cadre">
+    <h2 class="titre-section" id="t-comparatif">Gestion déléguée ou gestion en direct</h2>
+    <div class="table-defile" role="region" aria-label="Comparaison entre gestion déléguée et Halvern" tabindex="0">
+      <table>
+        <thead><tr><th></th><th>Gestion déléguée (fonds, mandat)</th><th class="halvern">Halvern</th></tr></thead>
+        <tbody>
+          <tr><td>Qui décide</td><td>Le gérant, selon le mandat ou la politique du fonds</td><td class="halvern">Vous, ligne par ligne</td></tr>
+          <tr><td>Ce que vous payez</td><td>Un pourcentage de votre capital, chaque année : 1,37 % en moyenne pour un fonds d'actions actif (AMF, 2025)</td><td class="halvern">Un abonnement fixe, de 0 à 290 € par an selon la formule, plus vos frais de courtage et de garde</td></tr>
+          <tr><td>Ce que vous voyez</td><td>Un reporting périodique, souvent sans le détail des lignes</td><td class="halvern">Chaque ligne, ses cours et son exposition, pendant la séance</td></tr>
+          <tr><td>Face au marché</td><td>Une comparaison à l'indice sur des périodes calendaires</td><td class="halvern">Vos ordres rejoués dans un ETF monde, à vos dates et vos montants</td></tr>
+          <tr><td>Corrélations et risque</td><td>Calculés par le gérant, rarement communiqués</td><td class="halvern">Calculés sur votre portefeuille, à chaque séance</td></tr>
+          <tr><td>Fiscalité, succession</td><td>Souvent pris en charge par un conseiller</td><td class="halvern">Non : Halvern est un outil d'analyse, pas un conseil patrimonial</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="faq bande" aria-labelledby="t-faq-tarif">
+  <div class="cadre">
+    <h2 class="titre-section" id="t-faq-tarif">Questions sur les tarifs</h2>
+    <div class="faq-liste">
+      <details><summary>Halvern remplace-t-il mon conseiller ou mon fonds ?</summary><p>Halvern remplace les outils, pas la décision. Il vous donne ce qu'un gérant utilise pour suivre un portefeuille : corrélations, risque, exposition, valorisation, mesure face au marché. Vous restez seul à choisir vos lignes. Pour la fiscalité, la succession ou l'assurance-vie, un conseiller patrimonial reste l'interlocuteur adapté.</p></details>
+      <details><summary>Pourquoi un abonnement fixe plutôt qu'un pourcentage ?</summary><p>Parce que le travail d'analyse est le même pour 20 000 € ou pour 2 millions. Avec un abonnement fixe, plus votre patrimoine est important, plus l'écart avec une gestion facturée en pourcentage grandit.</p></details>
+      <details><summary>Qu'est-ce que le prix fondateur ?</summary><p>Les inscrits à la liste d'attente paient 40 % de moins la première année, quelle que soit la formule payante choisie à l'ouverture. L'inscription est gratuite et n'engage à rien : aucun moyen de paiement n'est demandé aujourd'hui.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="appel bande" aria-labelledby="t-appel">
+  <div class="cadre">
+    <h2 id="t-appel">Soyez prévenu à l'ouverture</h2>
+    <p>Inscrivez-vous à la liste d'attente pour réserver le prix fondateur : 40 % de moins la première année. L'inscription est gratuite et n'engage à rien.</p>
+    <div class="actions"><a class="bouton-plein" href="index.html#rejoindre">Rejoindre la liste d'attente</a><a class="bouton-vide" href="tarifs.html">Voir les tarifs</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="pied bande">
+  <div class="cadre">
+    <div class="pied-marque">
+      <a class="marque" href="index.html"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2.5v15M16 2.5v15M4 13 16 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Halvern</a>
+      <p>Halvern est un outil d'analyse et de mesure de performance. Il ne fournit ni conseil en investissement ni recommandation sur un instrument financier, et ne passe aucun ordre. Investir en actions comporte un risque de perte en capital. Les performances passées ne préjugent pas des performances futures.</p>
+      <p>Les chiffres, noms et graphiques présentés sur ce site sont fictifs et servent d'illustration.</p>
+    </div>
+    <nav class="pied-liens" aria-label="Pied de page">
+      <div><b>Produit</b><a href="fonctionnalites.html">Fonctionnalités</a><a href="methode.html">Méthode</a><a href="tarifs.html">Tarifs</a></div>
+      <div><b>Aide</b><a href="questions.html">Questions fréquentes</a><a href="index.html#rejoindre">Liste d'attente</a></div>
+      <div><b>Légal</b><a href="mentions.html">Mentions légales</a><a href="mentions.html#confidentialite">Confidentialité</a></div>
+    </nav>
+  </div>
+  <div class="cadre pied-bas"><span>© 2026 Halvern · conçu et développé par LEKMINE Rayan</span><span>Projet en préparation · <a href="https://github.com/rlekmine-oa/halvern">code du site sur GitHub</a></span></div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>

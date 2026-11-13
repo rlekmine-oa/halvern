@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Méthode · Halvern</title>
+<meta name="description" content="Comment Halvern mesure les corrélations, la performance face au marché et le risque d'un portefeuille, avec les conventions de calcul.">
+<link rel="canonical" href="https://rlekmine-oa.github.io/halvern/methode.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0a1828">
+<meta name="author" content="LEKMINE Rayan">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Halvern">
+<meta property="og:title" content="Méthode · Halvern">
+<meta property="og:description" content="Comment Halvern mesure les corrélations, la performance face au marché et le risque d&#x27;un portefeuille, avec les conventions de calcul.">
+<meta property="og:url" content="https://rlekmine-oa.github.io/halvern/methode.html">
+<meta property="og:image" content="https://rlekmine-oa.github.io/halvern/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://rlekmine-oa.github.io/halvern/og.png">
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="entete bande" id="entete">
+  <div class="cadre">
+    <a class="marque" href="index.html" aria-label="Halvern, accueil"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2.5v15M16 2.5v15M4 13 16 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Halvern</a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="fonctionnalites.html">Fonctionnalités</a>
+      <a href="methode.html" class="actif" aria-current="page">Méthode</a>
+      <a href="tarifs.html">Tarifs</a>
+      <a href="questions.html">Questions</a>
+      <a class="cta" href="index.html#rejoindre">Liste d'attente</a>
+      <button class="bouton-menu" id="bouton-menu" type="button" aria-expanded="false" aria-controls="menu-mobile">Menu</button>
+    </nav>
+  </div>
+  <nav class="menu-mobile cadre" id="menu-mobile" aria-label="Navigation sur téléphone" hidden>
+    <a href="index.html">Accueil</a>
+    <a href="fonctionnalites.html">Fonctionnalités</a>
+    <a href="methode.html" aria-current="page">Méthode</a>
+    <a href="tarifs.html">Tarifs</a>
+    <a href="questions.html">Questions</a>
+    <a href="index.html#rejoindre">Liste d'attente</a>
+  </nav>
+</header>
+
+<main id="haut">
+<section class="page-tete bande" aria-labelledby="pt-titre">
+  <div class="cadre">
+    <p class="fil"><a href="index.html">Accueil</a> / Méthode</p>
+    <h1 id="pt-titre">Comment Halvern mesure votre portefeuille</h1>
+    <p class="chapo">Des méthodes de gérant, expliquées pas à pas, avec leurs formules et leurs limites. Les exemples sont fictifs.</p>
+  </div>
+</section>
+
+<section class="recit bande" id="correlations" aria-labelledby="t-correl">
+  <div class="cadre">
+    <div class="recit-tete"><h2 id="t-correl">Repérer ce qui diversifie vraiment</h2></div>
+    <div class="recit-grille" data-recit="correl">
+      <div class="scene" aria-hidden="true">
+        <div class="scene-cadre">
+          <div class="scene-haut"><span id="c-titre">Corrélation des rendements quotidiens, sur un an</span><span class="fictif">Exemple fictif</span></div>
+          <svg id="scene-correl" viewBox="0 0 640 340"></svg>
+          <div class="scene-bas">
+            <div><div class="l">Corrélation actuelle</div><div class="v" id="c-actuelle">0,78</div></div>
+            <div><div class="l">Écart normalisé</div><div class="v" id="c-z">—</div></div>
+            <div><div class="l">Cointégration</div><div class="v" id="c-coint">—</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="etapes">
+        <div class="pas" data-pas="0"><span class="code">Étape 1 sur 4</span><h3>La matrice montre vos vrais blocs de risque</h3><p>Luxe, banques et industrie européennes montent et baissent ensemble : trois lignes, un seul pari. Chaque case est une corrélation entre deux lignes, de −1 à +1.</p><div class="formule">ρ(A, B) = cov(rA, rB) ÷ (σA × σB)</div></div>
+        <div class="pas" data-pas="1"><span class="code">Étape 2 sur 4</span><h3>La corrélation glissante repère une décorrélation</h3><p>Sur six mois glissants, la corrélation entre deux actifs passe sous 0,3 : ils ont cessé d'évoluer ensemble. Halvern le repère, sur vos lignes ou sur n'importe quelle paire.</p><div class="formule">ρ sur 126 séances &lt; 0,3 → décorrélation</div></div>
+        <div class="pas" data-pas="2"><span class="code">Étape 3 sur 4</span><h3>L'écart normalisé dit s'il est inhabituel</h3><p>Le rapport de deux cours, ramené à sa moyenne et à sa dispersion, montre quand il sort de sa zone habituelle. Au-delà de deux écarts-types, l'écart est rare.</p><div class="formule">z = (écart − moyenne) ÷ écart-type</div></div>
+        <div class="pas" data-pas="3"><span class="code">Étape 4 sur 4</span><h3>La cointégration vérifie que la relation est stable</h3><p>Deux actifs corrélés peuvent dériver durablement. Le test d'Engle-Granger vérifie que leur écart revient bien vers sa moyenne sur plusieurs années.</p><div class="formule">statistique ADF −3,9 &lt; seuil −3,34 → relation stable</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="recit bande gris" id="performance" aria-labelledby="t-perf">
+  <div class="cadre">
+    <div class="recit-tete"><h2 id="t-perf">Mesurer ce que vos choix ont rapporté</h2></div>
+    <div class="recit-grille" data-recit="perf">
+      <div class="scene" aria-hidden="true">
+        <div class="scene-cadre">
+          <div class="scene-haut"><span>Gain cumulé en euros, hors versements</span><span class="fictif">Exemple fictif</span></div>
+          <svg id="scene-perf" viewBox="0 0 640 330"></svg>
+          <div class="scene-bas">
+            <div><div class="l">Net investi</div><div class="v" id="p-investi">11 000 €</div></div>
+            <div><div class="l">Témoin ETF monde</div><div class="v" id="p-temoin">—</div></div>
+            <div><div class="l">Valeur ajoutée</div><div class="v" id="p-ecart">—</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="etapes">
+        <div class="pas" data-pas="0"><span class="code">Étape 1 sur 4</span><h3>Vous importez votre journal d'ordres</h3><p>Achats et ventes, avec leurs dates et leurs montants, depuis l'export de votre courtier ou votre tableur.</p><div class="formule">date · titre · sens · quantité · montant</div></div>
+        <div class="pas" data-pas="1"><span class="code">Étape 2 sur 4</span><h3>Chaque ordre est rejoué dans un ETF monde</h3><p>3 000 € investis le 8 janvier deviennent 3 000 € d'ETF actions monde le 8 janvier. Le témoin reçoit exactement votre argent, à votre rythme.</p><div class="formule">parts témoin += montant ÷ cours de l'ETF du jour</div></div>
+        <div class="pas" data-pas="2"><span class="code">Étape 3 sur 4</span><h3>Seule la valeur créée apparaît</h3><p>Un nouvel apport ne fait pas monter la courbe : elle montre ce que vos lignes ont gagné, pas l'argent versé.</p><div class="formule">gain cumulé = valeur des lignes − net investi</div></div>
+        <div class="pas" data-pas="3"><span class="code">Étape 4 sur 4</span><h3>Vous lisez l'écart, et sa fiabilité</h3><p>En euros, en rendement annuel et en alpha avec sa statistique t. Sur cet exemple : +420 €, un alpha de +1,4 % par an, pas encore significatif.</p><div class="formule">valeur ajoutée = valeur − valeur du témoin</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="risque bande" id="risque" aria-labelledby="t-risque">
+  <div class="cadre">
+    <h2 class="titre-section" id="t-risque">Mesurer le risque de votre portefeuille</h2>
+    <div class="risque-grille">
+      <div class="mesures" id="mesures">
+        <div><div class="v" data-cible="14.2" data-format="pct1">14,2 %</div><div class="l">volatilité annualisée</div></div>
+        <div><div class="v neg" data-cible="-18.5" data-format="pct1">−18,5 %</div><div class="l">pire baisse depuis un sommet</div></div>
+        <div><div class="v" data-cible="0.92" data-format="dec2">0,92</div><div class="l">bêta face à l'ETF monde</div></div>
+        <div><div class="v neg" data-cible="-6.1" data-format="pct1">−6,1 %</div><div class="l">perte mensuelle dépassée une fois sur vingt</div></div>
+      </div>
+      <div class="eventail">
+        <div class="tete"><span>Valeur du portefeuille sur 5 ans, 10 000 trajectoires simulées</span><span class="fictif">Exemple fictif</span></div>
+        <svg id="eventail" viewBox="0 0 640 280" role="img" aria-label="Éventail de simulations : médiane, et zones de 50 % et 80 % des trajectoires."></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="conventions bande gris" aria-labelledby="t-conv">
+  <div class="cadre">
+    <h2 class="titre-section" id="t-conv">Conventions de calcul</h2>
+    <div class="liste-conv">
+      <div><b>Rendement quotidien</b><p>Pondéré dans le temps : (valeur du jour + ventes) ÷ (valeur de la veille + achats) − 1. Un versement ou un retrait ne crée pas de performance.</p></div>
+      <div><b>Témoin</b><p>Chaque achat et chaque vente rejoués, à la même date et pour le même montant, dans un ETF actions monde, frais de gestion de l'ETF inclus.</p></div>
+      <div><b>Alpha et bêta</b><p>Régression de Jensen des rendements quotidiens nets du taux sans risque sur ceux du témoin, alpha annualisé et accompagné de sa statistique t.</p></div>
+      <div><b>Taux sans risque</b><p>Taux de la facilité de dépôt de la Banque centrale européenne, au jour le jour.</p></div>
+      <div><b>Sharpe glissant</b><p>Calculé sur 252 séances, soit environ un an de cotations.</p></div>
+      <div><b>Corrélations</b><p>Sur les rendements quotidiens, en fenêtre fixe ou glissante (126 séances pour la décorrélation).</p></div>
+      <div><b>Cointégration</b><p>Test d'Engle-Granger sur l'écart de régression entre deux actifs, avec au moins 250 séances.</p></div>
+      <div><b>Simulations</b><p>Trajectoires de Monte-Carlo construites à partir des rendements historiques du portefeuille ; elles décrivent une dispersion possible, pas une prévision.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="appel bande" aria-labelledby="t-appel">
+  <div class="cadre">
+    <h2 id="t-appel">Soyez prévenu à l'ouverture</h2>
+    <p>Inscrivez-vous à la liste d'attente pour réserver le prix fondateur : 40 % de moins la première année. L'inscription est gratuite et n'engage à rien.</p>
+    <div class="actions"><a class="bouton-plein" href="index.html#rejoindre">Rejoindre la liste d'attente</a><a class="bouton-vide" href="tarifs.html">Voir les tarifs</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="pied bande">
+  <div class="cadre">
+    <div class="pied-marque">
+      <a class="marque" href="index.html"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2.5v15M16 2.5v15M4 13 16 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Halvern</a>
+      <p>Halvern est un outil d'analyse et de mesure de performance. Il ne fournit ni conseil en investissement ni recommandation sur un instrument financier, et ne passe aucun ordre. Investir en actions comporte un risque de perte en capital. Les performances passées ne préjugent pas des performances futures.</p>
+      <p>Les chiffres, noms et graphiques présentés sur ce site sont fictifs et servent d'illustration.</p>
+    </div>
+    <nav class="pied-liens" aria-label="Pied de page">
+      <div><b>Produit</b><a href="fonctionnalites.html">Fonctionnalités</a><a href="methode.html">Méthode</a><a href="tarifs.html">Tarifs</a></div>
+      <div><b>Aide</b><a href="questions.html">Questions fréquentes</a><a href="index.html#rejoindre">Liste d'attente</a></div>
+      <div><b>Légal</b><a href="mentions.html">Mentions légales</a><a href="mentions.html#confidentialite">Confidentialité</a></div>
+    </nav>
+  </div>
+  <div class="cadre pied-bas"><span>© 2026 Halvern · conçu et développé par LEKMINE Rayan</span><span>Projet en préparation · <a href="https://github.com/rlekmine-oa/halvern">code du site sur GitHub</a></span></div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>
